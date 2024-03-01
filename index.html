@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./assets/images/img_2.png" type="image/png" />
+		<title>Attri - Kayky de Sousa - Teste Prático Estagiário</title>
+
+		<meta name="language" content="pt-BR" />
+		<meta
+			name="description"
+			content="Este site foi desenvolvido como parte do processo seletivo para a vaga de estagiário na Attri. O objetivo do site é demonstrar as habilidades do candidato em desenvolvimento web, utilizando as tecnologias HTML, CSS, JavaScript e Bootstrap."
+		/>
+		<meta name="author" content="Kayky de Sousa" />
+		<meta name="keywords" content="processo seletivo, Attri, estágio, HTML, CSS, JavaScript, Bootstrap" />
+
+		<meta property="og:type" content="page" />
+		<meta property="og:url" content="https://attri-test-kaykysousa.vercel.app" />
+		<meta property="og:title" content="Attri - Kayky de Sousa - Teste Prático Estagiário" />
+		<meta
+			property="og:description"
+			content="Este site foi desenvolvido como parte do processo seletivo para a vaga de estagiário na Attri. O objetivo do site é demonstrar as habilidades do candidato em desenvolvimento web, utilizando as tecnologias HTML, CSS, JavaScript e Bootstrap."
+		/>
+
+		<meta property="article:author" content="Kayky de Sousa" />
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Attri - Kayky de Sousa - Teste Prático Estagiário" />
+		<meta
+			name="twitter:description"
+			content="Este site foi desenvolvido como parte do processo seletivo para a vaga de estagiário na Attri. O objetivo do site é demonstrar as habilidades do candidato em desenvolvimento web, utilizando as tecnologias HTML, CSS, JavaScript e Bootstrap."
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./styles/global.css" />
+		<script src="./js/script.js" defer></script>
+		<script src="./js/bootstrap.bundle.min.js" defer></script>
+	</head>
+	<body>
+		<!-- #region header -->
+		<header class="navbar fixed-top shadow-sm border-bottom">
+			<div class="container-md py-1 d-">
+				<a class="navbar-brand" href="#">Attri</a>
+
+				<div>
+					<button class="btn" id="toggle-theme" title="Alterar tema">
+						<svg
+							id="light-icon"
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							fill="currentColor"
+							class="bi bi-brightness-high-fill"
+							viewBox="0 0 16 16"
+							style="display: none"
+						>
+							<path
+								d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+							/>
+						</svg>
+
+						<svg
+							id="dark-icon"
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							fill="currentColor"
+							class="bi bi-moon-stars-fill"
+							viewBox="0 0 16 16"
+						>
+							<path
+								d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"
+							/>
+							<path
+								d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"
+							/>
+						</svg>
+					</button>
+					<button
+						class="navbar-toggler border-0"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#header-offcanvas"
+						aria-controls="header-offcanvas"
+						title="Abrir menu"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+
+				<!-- #region offcanvas-menu -->
+				<aside class="offcanvas offcanvas-end" tabindex="-1" id="header-offcanvas">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title">Attri</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="offcanvas"
+							aria-label="Fechar menu"
+							title="Fechar menu"
+						></button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a href="#banner" class="nav-link" title="Lorem ipsum"> Lorem ipsum </a>
+							</li>
+							<li class="nav-item">
+								<a href="#icons" class="nav-link" title="Ícones"> Ícones </a>
+							</li>
+							<li class="nav-item">
+								<a href="#images" class="nav-link" title="Imagens"> Imagens </a>
+							</li>
+							<li class="nav-item">
+								<a href="#reviews" class="nav-link" title="Avaliações"> Avaliações </a>
+							</li>
+							<li class="nav-item">
+								<a href="#form" class="nav-link" title="Formulário"> Formulário </a>
+							</li>
+						</ul>
+					</div>
+				</aside>
+				<!-- #endregion -->
+			</div>
+		</header>
+		<!-- #endregion -->
+
+		<!-- #region main -->
+		<main class="main">
+			<!-- #region banner -->
+			<section id="banner" class="banner">
+				<div class="banner__overlay">
+					<div
+						class="banner__content container-md text-center d-flex flex-column align-items-center justify-content-center position-relative"
+					>
+						<h1 class="fw-bold lh-1">Lorem ipsum dolor sit amet, coctetur.</h1>
+						<p class="fw-light">Lorem ipsum dolor sit amet, coctetur.</p>
+						<div class="position-absolute bottom-0 mb-4 d-flex flex-column align-items-center">
+							<button
+								class="btn button-primary rounded-pill d-flex align-items-center px-4 mb-4 fw-bold fs-3"
+								title="Lorem ipsum"
+							>
+								<span class="me-2">Lorem ipsum</span>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 320 512"
+									fill="currentColor"
+									height="20"
+									width="20"
+								>
+									<path
+										d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+									/>
+								</svg>
+							</button>
+							<a href="#icons" title="Ir para baixo" class="banner__scroll-down p-1">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 512 512"
+									fill="currentColor"
+									height="32"
+									width="32"
+								>
+									<path
+										d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- #endregion -->
+
+			<!-- #region icons -->
+			<section class="icons container" id="icons">
+				<h1 class="visually-hidden">Lorem ipsum</h1>
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 mx-auto">
+					<div class="icons_card d-flex flex-column align-items-center col p-4 text-center">
+						<img src="./assets/images/icon_4.png" alt="Ícone de diamante" class="mb-2" />
+						<h2 class="h4">Lorem ipsum</h2>
+						<p class="mb-3">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec nibh eu
+							risus gravida mattis. Ut at lectus
+						</p>
+						<button class="btn rounded-pill px-4">Ver detalhes</button>
+					</div>
+
+					<div class="icons_card d-flex flex-column align-items-center col p-4 text-center">
+						<img src="./assets/images/icon_3.png" alt="Ícone de uma tag HTML" class="mb-2" />
+						<h2 class="h4">Lorem ipsum</h2>
+						<p class="mb-3">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec nibh eu
+							risus gravida mattis. Ut at lectus
+						</p>
+						<button class="btn rounded-pill px-4">Ver detalhes</button>
+					</div>
+
+					<div class="icons_card d-flex flex-column align-items-center col p-4 text-center">
+						<img src="./assets/images/icon_2.png" alt="Ícone de uma casa" class="mb-2" />
+						<h2 class="h4">Lorem ipsum</h2>
+						<p class="mb-3">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec nibh eu
+							risus gravida mattis. Ut at lectus
+						</p>
+						<button class="btn rounded-pill px-4">Ver detalhes</button>
+					</div>
+
+					<div class="icons_card d-flex flex-column align-items-center col p-4 text-center">
+						<img
+							src="./assets/images/icon_1.png"
+							alt="Ícone do personagem de vídeo-game Pacman"
+							class="mb-2"
+						/>
+						<h2 class="h4">Lorem ipsum</h2>
+						<p class="mb-3">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec nibh eu
+							risus gravida mattis. Ut at lectus
+						</p>
+						<button class="btn rounded-pill px-4">Ver detalhes</button>
+					</div>
+				</div>
+			</section>
+			<!-- #endregion -->
+
+			<!-- #region images -->
+			<section id="images" class="images container text-center d-flex flex-column align-items-center">
+				<h1 class="fw-bold mb-3">Lorem ipsum.</h1>
+				<p class="mb-5 section-description">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec nibh eu risus
+					gravida mattis. Ut at Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					<a href="#">Pellentesquisus</a> gravida mattis. e nec nibh eu risus gravida mattis. Ut at
+					lectus lectus
+				</p>
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 mx-auto w-100">
+					<figure class="figure col">
+						<div class="figure-img ratio ratio-1x1 shadow-sm">
+							<img
+								src="./assets/images/img_1.png"
+								alt="Ilustração digital de pôr do sol"
+								class="img-fluid object-fit-cover"
+							/>
+						</div>
+						<figcaption class="figure-caption text-start">
+							Lorem ipsum dolor sit amet, consectetur
+						</figcaption>
+					</figure>
+					<figure class="figure col">
+						<div class="figure-img ratio ratio-1x1 shadow-sm">
+							<img
+								src="./assets/images/img_2.png"
+								alt="Ilustração digital de montanhas, com uma bandeira vermelha no topo"
+								class="img-fluid object-fit-cover"
+							/>
+						</div>
+						<figcaption class="figure-caption text-start">
+							Lorem ipsum dolor sit amet, consectetur
+						</figcaption>
+					</figure>
+					<figure class="figure col">
+						<div class="figure-img ratio ratio-1x1 shadow-sm">
+							<img
+								src="./assets/images/img_3.png"
+								alt="Ilustração digital da estação de inverno, com neve, árvores e casas"
+								class="img-fluid object-fit-cover"
+							/>
+						</div>
+						<figcaption class="figure-caption text-start">
+							Lorem ipsum dolor sit amet, consectetur
+						</figcaption>
+					</figure>
+					<figure class="figure col">
+						<div class="figure-img ratio ratio-1x1 shadow-sm">
+							<img
+								src="./assets/images/img_4.png"
+								alt="Ilustração digital de praia, com areia, guarda-sol, bola e caranguejo"
+								class="img-fluid object-fit-cover"
+							/>
+						</div>
+						<figcaption class="figure-caption text-start">
+							Lorem ipsum dolor sit amet, consectetur
+						</figcaption>
+					</figure>
+				</div>
+			</section>
+			<!-- #endregion -->
+
+			<!-- #region reviews -->
+			<section id="reviews" class="reviews container text-center d-flex flex-column align-items-center">
+				<h1 class="fw-bold mb-3">Lorem ipsum.</h1>
+				<p class="mb-5 section-description">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec nibh eu risus
+					gravida mattis. Ut at Lorem ipsum dolor sit amet, consectetur adipiscing.
+				</p>
+				<div class="row row-cols-1 row-cols-lg-3 mx-auto g-4 w-100">
+					<div class="col">
+						<div
+							class="reviews__card h-100 d-flex flex-column align-items-center rounded-3 p-4 shadow-sm"
+						>
+							<img
+								src="./assets/images/people_1.jpg"
+								alt="Foto de perfil do avaliador 1"
+								class="object-fit-cover rounded-circle mb-4"
+							/>
+							<p class="flex-grow-1">
+								"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec
+								nibh eu risus gravida mattis."
+							</p>
+							<p class="m-0 fw-bold">Pessoa Nome</p>
+							<p class="m-0">Cargo na companhia Etc</p>
+						</div>
+					</div>
+
+					<div class="col">
+						<div
+							class="reviews__card h-100 d-flex flex-column align-items-center rounded-3 col p-4 shadow-sm"
+						>
+							<img
+								src="./assets/images/people_2.jpg"
+								alt="Foto de perfil do avaliador 2"
+								class="object-fit-cover rounded-circle mb-4"
+							/>
+							<p class="flex-grow-1">
+								"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec
+								nibh eu risus gravida mattis. Ut at Lorem ipsum dolor sit amet, consectetur
+								adipiscing.nec nibh eu risus gravida mattis. Ut at Lorem ipsum dolor sit amet,
+								consectetur adipiscing."
+							</p>
+							<p class="m-0 fw-bold">Pessoa Nome</p>
+							<p class="m-0">Cargo na companhia Etc</p>
+						</div>
+					</div>
+
+					<div class="col">
+						<div
+							class="reviews__card h-100 d-flex flex-column align-items-center rounded-3 col p-4 shadow-sm"
+						>
+							<img
+								src="./assets/images/people_3.jpg"
+								alt="Foto de perfil do avaliador 3"
+								class="object-fit-cover rounded-circle mb-4"
+							/>
+							<p class="flex-grow-1">
+								"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec
+								nibh eu risus gravida mattis. Ut at Lorem ipsum dolor sit amet, consectetur
+								adipiscing.nec nibh eu risus gravida mattis. Ut at Lorem ipsum dolor sit amet,
+								consectetur adipiscing.”at Lorem ipsum dolor sit amet, consectetur
+								adipiscing."
+							</p>
+							<p class="m-0 fw-bold">Pessoa Nome</p>
+							<p class="m-0">Cargo na companhia Etc</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- #endregion -->
+
+			<!-- #region form -->
+			<section class="form">
+				<div class="form__overlay text-center d-flex flex-column align-items-center">
+					<h1 class="fw-bold mb-3">Lorem ipsum.</h1>
+					<form
+						id="form"
+						class="form__content rounded-4 p-4 p-md-5 container d-flex flex-column row-gap-3 shadow-sm"
+					>
+						<div class="row row-cols-1 row-cols-md-2 row-gap-3 gx-3">
+							<div class="col">
+								<div class="form-floating">
+									<input
+										type="text"
+										class="form-control rounded-4"
+										id="input-name"
+										placeholder="Ex.: João"
+										required
+									/>
+									<label for="input-name" class="fw-bold">Nome</label>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-floating">
+									<input
+										type="text"
+										class="form-control rounded-4"
+										id="input-lastname"
+										placeholder="Ex.: Silva"
+										required
+									/>
+									<label for="input-lastname" class="fw-bold">Sobrenome</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="row row-cols-1 row-cols-md-2 row-gap-3 gx-3">
+							<div class="col">
+								<div class="form-floating">
+									<input
+										type="email"
+										class="form-control rounded-4"
+										id="input-email"
+										placeholder="Ex.: email@exemplo"
+										required
+									/>
+									<label for="input-email" class="fw-bold">E-mail</label>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-floating">
+									<input
+										type="tel"
+										class="form-control rounded-4"
+										id="input-phone"
+										placeholder="Ex.: (00) 00000-0000"
+										required
+									/>
+									<label for="input-phone" class="fw-bold">Telefone</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col">
+								<div class="form-floating">
+									<textarea
+										class="form-control rounded-4"
+										id="input-message"
+										placeholder="Ex.: Mensagem"
+										required
+									></textarea>
+									<label for="input-message" class="fw-bold">Mensagem</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col d-flex justify-content-center">
+								<button
+									type="submit"
+									class="btn button-primary rounded-pill d-flex align-items-center px-5 fw-bold fs-4"
+									title="Enviar formulário"
+								>
+									Lorem ipsum
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- #endregion -->
+		</main>
+		<!-- #endregion -->
+
+		<!-- #region footer -->
+		<footer class="footer p-4 text-center">
+			<p class="m-0">© 2024 Sitename - Todos os direitos reservados</p>
+		</footer>
+		<!-- #endregion -->
+
+		<button class="scroll-top p-1 btn position-fixed fw-bold" id="scroll-top" title="Ir para o topo">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="32"
+				height="32"
+				fill="currentColor"
+				class="bi bi-arrow-up-short d-block"
+				viewBox="0 0 16 16"
+			>
+				<path
+					fill-rule="evenodd"
+					d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"
+				/>
+			</svg>
+		</button>
+	</body>
+</html>
